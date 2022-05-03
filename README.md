@@ -37,6 +37,8 @@ Finally, we decided  delivery method and granularity:
 #### Roger needs access the sales forecast from the cell phone and the granularity will be per week!
  
 ____
+## Upcoming: Bot telegram.
+____
 ## Machine Learning results
 
 <img src="img/all_resume.png/"/>
@@ -50,13 +52,11 @@ After applying cross-validation for all model that was suggested to be used, the
 
 - ```RMSE```: _1098._
 
-  To better understand, these metrics mean that the error average is 766.47 (This value refers to budget). It can be above or below compared to real value,  and this means a total of 11% compared to the entire prediction. (As shown in figure 1). Roger (CFO) got a little confused. In order to clear things up:  _figure two_ shows, for each store, a best and worst scenario for the sales. The margin of error in relation to the total sales value is majority low, as shown in Figure 4. Values ​​for the mean absolute percentage error, are concentrated around 10%. 
+  To better understand, these metrics mean that the error average is 766.47 (This value refers to budget). It can be above or below compared to real value,  and this means a total of 11% compared to the entire prediction. (As shown in figure 1). Roger (CFO) got a little confused. In order to clear things up:  _figure two_ shows, for each store, a best and worst scenario for the sales. The margin of error in relation to the total sales value is majority low, as shown in Figure 4. Values for the mean absolute percentage error, are concentrated around 10%. 
 
 To simplify even more, there are two scenarios, the worst and the best (figure 3). The difference between the worst and best scenario is _1,715,379_. At best, sales will reach _287,943,717_ and at worst _286,228,337_. (In figure 3 this value refers to sales of all stores)
 
 Note: The idea here is to report the results. This step **isn't that easy** to implement as reported here.
-
-## Bot telegram working
 
 ### Data preprocessing
 
