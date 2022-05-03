@@ -44,7 +44,7 @@ ____
 <img src="img/all_resume.png/"/>
 
 
-After applying cross-validation for all model that was suggested to be used, the chosen model was XGBoost. Initially, the model did not present satisfactory results, so it was necessary feature engineering, fine tunning. After that, the model got the following performances:
+After applying cross-validation for all model that was suggested to be used, the chosen model was XGBoost. Initially, the model did not present satisfactory results, so it was necessary feature engineering (most of it was derived) and fine tunning. After that, the model got the following performances:
 
 - ```MAE```: _766.47_
 
@@ -275,7 +275,7 @@ Strong: -
 ____
 ### Data Modeling
 
-**Machine learning is facilitated with numerical data and at the same scale**
+**Machine learning is facilitated with numerical data and at the same range**
 
 The idea of data modeling in a data science project is to basically solve two problems:
 
@@ -288,7 +288,7 @@ For these categorical variables, highlighted in the image above, we use differen
 For ```state_holiday``` a technique called OneHotEncoding was used. Here we didnt fall into curse of dimensionality, just because this feature stores just three kind of holidays and it does not encrease substancialy our dataset.
 For ```store_type``` the Label Encoder technique was used and finally for ```assortment``` Order Encoder was used.
 
-_For anyone interested and to reduce the size of this readme, I will recommend reading <https://towardsdatascience.com/all-about-categorical-variable-encoding-305f3361fd02> to understand the details of the technics chosen in this project._
+_For anyone interested and to reduce the size of this readme, I will recommend [reading this article](https://towardsdatascience.com/all-about-categorical-variable-encoding-305f3361fd02) to understand the details of the technics chosen in this project._
 
 
 - 2. Variables with greater range, as shown in the image below, and this tends to bias the model. So to deal with this problem, we need to make the variables on the same scale in order to deal with bias problem.
