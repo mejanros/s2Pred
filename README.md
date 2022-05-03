@@ -5,9 +5,9 @@ This project was developed for sales forecasting at Rossmann, a German-based dru
 
 the main goal was:
 
-- Creation of a Bot for telegram to help managers and CFO check, from wherever they are, the sales value for each store.
+- Creation of a Bot for telegram to help managers and CFO check, from wherever they are, the sales value for each store - upcoming.
 
-- Data analysis, which is validated and disproved hypotheses about characteristics of the profile of stores that sell more so can help the business and marketing teams to assertively customize decision making
+- Data analysis, which is validated or not some hypotheses about characteristics of stores that sell more so can help the business and marketing teams to assertively customize decision making
 ### Code and Resources Used
 **Python Version:** 3.7                                                                                                                   
 **Packages:** Pandas, Numpy, Sklearn, Matplotlib, Seaborn, Flask, Pickle, Reflection.                                             
@@ -15,11 +15,11 @@ the main goal was:
 
 ____
 
-#### note: To do not turn this readme so extensively, I'll comment only on some points about this project. I wanna thank you to be here and if you have some suggestions or want to contact me for whatever reason, feel free.
+#### Note: To do not turn this readme so exhaustive, I'll comment only some points about the project. *I wanna thank you to be here and if you have some suggestions or want to contact me for whatever reason, feel free :D*.
   <a href="https://www.linkedin.com/in/jean-rodrigues/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"   target="_blank"></a> 
 ____
 
-#### It's time to contextualize our business problem, so take a coffee and lets to a little story.
+## It's time to contextualize our business problem, so take a coffee and lets to a little story.
 
 You are the data scientist at Rossmann and suddenly you start receiving calls, emails, and telegram messages from many managers. They are contacting you to ask for a sales forecast for the next 6 weeks.
 
@@ -39,7 +39,7 @@ Finally, we decided  delivery method and granularity:
 ____
 ## Machine Learning results
 
-<img src="img/all_resume_done.png/"/>
+<img src="img/all_resume.png/"/>
 
 
 After applying cross-validation for all model that was suggested to be used, the chosen model was XGBoost. Initially, the model did not present satisfactory results, so it was necessary feature engineering, fine tunning. After that, the model got the following performances:
@@ -275,30 +275,29 @@ Strong: -
 ____
 ### Data Modeling
 
-**"O aprendizado de maquinas é facilitado com dados numéricos e na mesma escala"** 
+**Machine learning is facilitated with numerical data and at the same scale**
 
-A ideia da modelagem dos dados em um projeto de ciencia de dados é resolver basicamente dois problemas:
+The idea of data modeling in a data science project is to basically solve two problems:
 
-- 1. Como mencionei antes, os modelos (_pelo menos a maioria_) foram engenheirados para lidar de uma maneira melhor com dados numérico, porém, existem dados categóricos dentro do conjunto de dados, o que dificulta a performance do modelo, e os mesmo precisarão ser transformados em numericos.
+- 1. As I mentioned before, the models (_at least most_) were engineered to handle in a better way with  numerical data, however, there is categorical data within the dataset, which makes hard the model performance or sometimes are complitely misunderstood. These categorical data will need to be converted to numbers.
 
 <img src="img/cat_feats.png" width=100% />
 
-Para essas variaveis categoricas, salientadas na imagem acima, utilizamos tecnicas diferentes.
+For these categorical variables, highlighted in the image above, we use different techniques.
 
-Para ```state_holiday``` foi utilizado uma técnica chamada OneHotEncoding. 
-Para ```store_type``` foi utilizado a técnica Label Enconder e por fim para ```assortment``` foi utilizado Order Encoder.
+For ```state_holiday``` a technique called OneHotEncoding was used. Here we didnt fall into curse of dimensionality, just because this feature stores just three kind of holidays and it does not encrease substancialy our dataset.
+For ```store_type``` the Label Encoder technique was used and finally for ```assortment``` Order Encoder was used.
 
-_Para quem tiver interesse e para reduzir o tamanho desse readme, vou recomendar essa leitura <https://towardsdatascience.com/all-about-categorical-variable-encoding-305f3361fd02> para entender os por menores técnicos das técnicas escolhidas nesse projeto._
+_For anyone interested and to reduce the size of this readme, I will recommend reading <https://towardsdatascience.com/all-about-categorical-variable-encoding-305f3361fd02> to understand the details of the technics chosen in this project._
 
 
-- 2. As variaveis com maior range, como mostra a imagem abaixo, e isso tende a inviesar o modelo. Então para lidar com esse problema, precisamos deixar as variaveis em uma mesma escala a fim de contornar o problema de vies.
+- 2. Variables with greater range, as shown in the image below, and this tends to bias the model. So to deal with this problem, we need to make the variables on the same scale in order to deal with bias problem.
 
  <img src="img/dados_escalas_diferentes.png" width=100% />
  
  
- Para regularizar de maneira assertiva as features ```competition_distance```, ```year```, ```competition_time_month``` e ```promo_time_week``` é preciso checar sua distribuição para entender se as mesmas apresentam outliers e isso define qual sera a técnica utilizada aqui. Para essas **reescalar** foi utilizado **RobustScaler** uma função do modulo **preprocessing** da biblioteca **Sklearn**.
- 
- ```day_of_week```, ```competition_distance```, ```year```, ```month```, ```day```, ```week_of_year```, ```competition_time_month```, ```promo_time_week``` 
-
-### Productionization
+ To assertively regularize the features ```competition_distance```, ```year```, ```competition_time_month``` and ```promo_time_week```, it is necessary to check their distribution to understand if they have outliers and this defines the technique used here. For these rescaling, RobustScaler was used, a function of the preprocessing module of the Sklearn library. 
 _____
+
+
+If you are here, thank you one more time for reading :relaxed:
