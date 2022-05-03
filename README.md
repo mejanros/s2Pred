@@ -1,5 +1,5 @@
 ## *2sPred* - *Store Sales Prediction.*
-###  Data Science Sales Estimator: Project Overvie
+###  Data Science Sales Estimator: Project Overview
 
 This project was developed for sales forecasting at Rossmann, a German-based drugstore chain with operations in more than 3,000 stores in seven European countries. The dataset is publicly available in a Kaggle competition.
 
